@@ -39,6 +39,10 @@ $(function () {
         this.get('#/validity', function () {
             this.partial('views/validity.html');
         });
+
+          this.get('#/offer', function () {
+            this.partial('views/offer.html');
+        });
     });
 
     app.run('#/');
