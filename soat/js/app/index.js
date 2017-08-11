@@ -1,5 +1,7 @@
 $(function () {
 
+    
+
     $('.dropdown-button').dropdown({
         constrainWidth: false
     });
@@ -43,7 +45,10 @@ $(function () {
           this.get('#/offer', function () {
             this.partial('views/offer.html');
         });
+        
     });
+ 
+
 
     app.run('#/');
 });

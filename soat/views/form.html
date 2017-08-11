@@ -13,29 +13,29 @@
                     <h6 class="indigo-text">Vehículo</h6>
                 </div>
                 <div class="input-field col s12">
-                    <input id="placa" type="text" class="validate">
-                    <label for="placa">Placa</label>
+                    <input id="placa" type="text" class="validate" onblur="Traer_Vehiculo()" placeholder="Placa">
+                
                 </div>
                 <div class="input-field col s12 m6 l6">
-                    <select>
+                    <select id="Marca">
                             <option class="pink-text" value="" disabled selected>Marca</option>
-                            <option class="pink-text" value="1">Porsche</option>
-                            <option class="pink-text" value="2">Mercedes-Benz</option>
-                            <option class="pink-text" value="3">BMW</option>
+                            <option class="pink-text" value="1">Toyota</option>
+                            <option class="pink-text" value="2">Kia</option>
+                            <option class="pink-text" value="3">Huyndai</option>
                         </select>
 
                 </div>
                 <div class="input-field col s12 m6 l6">
-                    <select>
+                    <select id="Modelo">
                             <option class="pink-text" value="" disabled selected>Modelo</option>
-                            <option class="pink-text" value="1">718 Boxster</option>
-                            <option class="pink-text" value="2">718 Cayman</option>
-                            <option class="pink-text" value="3">Macan</option>
+                            <option class="pink-text" value="1">Corolla 1.6</option>
+                            <option class="pink-text" value="2">Cerato 1.6</option>
+                            <option class="pink-text" value="3">Elantra</option>
                         </select>
 
                 </div>
                 <div class="input-field col s12">
-                    <select>
+                    <select id="Tipo">
                             <option class="pink-text" value="" disabled selected>Tipo</option>
                             <option class="pink-text" value="1">Automovil</option>
                             <option class="pink-text" value="2">Camioneta</option>
@@ -44,8 +44,8 @@
 
                 </div>
                 <div class="input-field col s12 m6 l6">
-                    <input id="anio" type="number" class="validate">
-                    <label for="anio">Año</label>
+                    <input id="anio" type="number" class="validate" placeholder="Año">
+                     
                 </div>
                 <div class="input-field col s12 m6 l6">
                     <select>
@@ -60,7 +60,7 @@
                     <select>
                             <option class="pink-text" value="" disabled selected>Región</option>
                             <option class="pink-text" value="1">Lima</option>
-                            <option class="pink-text" value="2">Provincia</option>
+                            <option class="pink-text" value="2">Arequipa</option>
                           
                         </select>
 
@@ -71,35 +71,38 @@
                 <div class="col-md-12 text-center">
                     <h6 class="indigo-text">Contratante</h6>
                 </div>
-                 <div class="input-field col s12 m6 l6">
-                    <input id="Dni" type="text" class="validate">
-                    <label for="Dni">Dni</label>
+                <div class="input-field col s12 m6 l6">
+                    <input id="Dni" type="text" class="validate" onblur="Traer_contratante()" placeholder="DNI">
+
                 </div>
                 <div class="input-field col s12 m6 l6a">
-                    <input id="nombre" type="text" class="validate">
-                    <label for="nombre">Nombre</label>
+                    <input id="nombre" type="text" class="validate" placeholder="Nombres" >
+              
                 </div>
-                <div class="input-field col s12">
-                    <input id="ApellidoP" type="text" class="validate">
-                    <label for="ApellidoP">Apellido Paterno</label>
+                <div class="input-field col s12 l6a">
+                    <input id="ApellidoP" type="text" class="validate" placeholder="Apelllido Paterno">
+             
 
                 </div>
                 <div class="input-field col s12">
-                    <input id="ApellidoM" type="text" class="validate">
-                    <label for="ApellidoM">Apellido Materno</label>
+                    <input id="ApellidoM" type="text" class="validate" placeholder="Apellido Materno">
+
                 </div>
-                <div class="input-field col s12">
-                    <select>
+                <div class="input-select col s12">
+                    <select id="Depa">
                             <option class="pink-text" value="" disabled selected>Departamento</option>
                             <option class="pink-text" value="1">Lima</option>
                             <option class="pink-text" value="2">La Litertad</option>
                             <option class="pink-text" value="3">Arequipa</option>
                         </select>
 
+
+
                 </div>
 
+
                 <div class="input-field col s12  m6 l6">
-                    <select>
+                    <select name="Provincia" id="Provi">
                             <option class="pink-text" value="" disabled selected>Provincia</option>
                             <option class="pink-text" value="1">Lima</option>
                             <option class="pink-text" value="2">Barranca</option>
@@ -108,7 +111,7 @@
 
                 </div>
                 <div class="input-field col s12  m6 l6">
-                    <select>
+                    <select name="Distrito" id="Dist">
                             <option class="pink-text" value="" disabled selected>Distrito</option>
                             <option class="pink-text" value="1">Lima</option>
                             <option class="pink-text" value="2">Miraflores</option>
@@ -126,8 +129,43 @@
 </div>
 
 <script>
-    $(function () {
+
+        $(function () {
         $('select').material_select();
-    });
+        });
+
+        function Traer_contratante() {
+        $("#nombre").val("Juan");
+        $("#ApellidoP").val("Perez");
+        $("#ApellidoM").val("Perez")
+        $("#Depa").val("1");
+        $("#Provi").val("1");
+        $("#Dist").val("3");
+        //reinicializa el componente
+        $('#Depa').material_select();
+        $('#Provi').material_select();
+        $('#Dist').material_select();
+             
+    }
+
+
+    function Traer_Vehiculo() {
+
+        $("#Marca").val("1");
+        $("#Modelo").val("1");
+        $("#Tipo").val("1");
+         $("#anio").val("2016");
+        //reinicializa el componente
+        $('#Marca').material_select();
+        $('#Modelo').material_select();
+        $('#Tipo').material_select();
+
+        
+
+    }
+ 
+
+
+
 
 </script>
