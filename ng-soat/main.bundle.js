@@ -175,7 +175,7 @@ AppModule = __decorate([
 /***/ "../../../../../src/app/pages/confirm/confirm-document.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<object data=\"/assets/docs/SOAT_ELECTRONICO.pdf\" width=\"400px\" height=\"500px\" type='application/pdf'>\r\n   <p>Disculpa el documento no se pudo mostrar :(</p>\r\n   <a href=\"/assets/docs/SOAT_ELECTRONICO.pdf\" target=\"_blank\">Descargalo</a>\r\n </object>"
+module.exports = "<object data=\"assets/docs/SOAT_ELECTRONICO.pdf\" width=\"400px\" height=\"500px\" type='application/pdf'>\r\n   <p>Disculpa el documento no se pudo mostrar :(</p>\r\n   <a href=\"assets/docs/SOAT_ELECTRONICO.pdf\" target=\"_blank\">Descargalo</a>\r\n </object>"
 
 /***/ }),
 
