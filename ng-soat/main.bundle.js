@@ -161,7 +161,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_9_app_pages_pages_module__["a" /* PagesModule */],
             __WEBPACK_IMPORTED_MODULE_5__angular_material__["a" /* MdIconModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_flex_layout__["a" /* FlexLayoutModule */],
-            __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* RouterModule */].forRoot(appRoutes, { useHash: true })
+            __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* RouterModule */].forRoot(appRoutes)
         ],
         providers: [],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]]
