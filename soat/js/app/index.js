@@ -16,7 +16,13 @@ $(function () {
         this.get('#/form', function () {
             this.partial('views/form.html');
         });
-		
+        
+          this.get('#/vehicle', function () {
+            this.partial('views/vehicle.html');
+        });
+          this.get('#/contractor', function () {
+            this.partial('views/contractor.html');
+        });
 	 
         this.get('#/mail', function () {
             this.partial('views/mail.html');
@@ -46,6 +52,10 @@ $(function () {
             this.partial('views/offer.html');
         });
         
+        this.get('#/Documents', function () {
+            this.partial('views/Documents.html');
+        });
+
     });
  
 
