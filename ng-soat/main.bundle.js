@@ -104,10 +104,10 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_app_pages_purchase_purchase_component__ = __webpack_require__("../../../../../src/app/pages/purchase/purchase.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_app_pages_confirm_confirm_component__ = __webpack_require__("../../../../../src/app/pages/confirm/confirm.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_app_pages_validity_validity_component__ = __webpack_require__("../../../../../src/app/pages/validity/validity.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_app_pages_car_info_car_info_component__ = __webpack_require__("../../../../../src/app/pages/car-info/car-info.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_app_pages_search_person_search_person_component__ = __webpack_require__("../../../../../src/app/pages/search-person/search-person.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_app_pages_person_info_person_info_component__ = __webpack_require__("../../../../../src/app/pages/person-info/person-info.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_app_pages_coverage_coverage_component__ = __webpack_require__("../../../../../src/app/pages/coverage/coverage.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_app_pages_search_person_search_person_component__ = __webpack_require__("../../../../../src/app/pages/search-person/search-person.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_app_pages_person_info_person_info_component__ = __webpack_require__("../../../../../src/app/pages/person-info/person-info.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_app_pages_coverage_coverage_component__ = __webpack_require__("../../../../../src/app/pages/coverage/coverage.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_app_pages_vehicle_info_vehicle_info_component__ = __webpack_require__("../../../../../src/app/pages/vehicle-info/vehicle-info.component.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -135,10 +135,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var appRoutes = [
     { path: '', component: __WEBPACK_IMPORTED_MODULE_8_app_pages_home_home_component__["a" /* HomeComponent */] },
-    { path: 'vehiculo/:placa', component: __WEBPACK_IMPORTED_MODULE_14_app_pages_car_info_car_info_component__["a" /* CarInfoComponent */] },
-    { path: 'buscar-persona', component: __WEBPACK_IMPORTED_MODULE_15_app_pages_search_person_search_person_component__["a" /* SearchPersonComponent */] },
-    { path: 'persona', component: __WEBPACK_IMPORTED_MODULE_16_app_pages_person_info_person_info_component__["a" /* PersonInfoComponent */] },
-    { path: 'cobertura', component: __WEBPACK_IMPORTED_MODULE_17_app_pages_coverage_coverage_component__["a" /* CoverageComponent */] },
+    { path: 'vehiculo/:placa', component: __WEBPACK_IMPORTED_MODULE_17_app_pages_vehicle_info_vehicle_info_component__["a" /* VehicleInfoComponent */] },
+    { path: 'buscar-persona', component: __WEBPACK_IMPORTED_MODULE_14_app_pages_search_person_search_person_component__["a" /* SearchPersonComponent */] },
+    { path: 'persona', component: __WEBPACK_IMPORTED_MODULE_15_app_pages_person_info_person_info_component__["a" /* PersonInfoComponent */] },
+    { path: 'cobertura', component: __WEBPACK_IMPORTED_MODULE_16_app_pages_coverage_coverage_component__["a" /* CoverageComponent */] },
     { path: 'mail', component: __WEBPACK_IMPORTED_MODULE_10_app_pages_mail_mail_component__["a" /* MailComponent */] },
     { path: 'vigencia', component: __WEBPACK_IMPORTED_MODULE_13_app_pages_validity_validity_component__["a" /* ValidityComponent */] },
     { path: 'pagar', component: __WEBPACK_IMPORTED_MODULE_11_app_pages_purchase_purchase_component__["a" /* PurchaseComponent */] },
@@ -169,85 +169,6 @@ AppModule = __decorate([
 ], AppModule);
 
 //# sourceMappingURL=app.module.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/car-info/car-info.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n        <div md-card-avatar class=\"accentColor\">\r\n            <md-icon>directions_car</md-icon>\r\n        </div>\r\n        <md-card-title class=\"accentColor\">Datos del vehículo : {{placa}}</md-card-title>\r\n        <md-card-subtitle>Verifica y completa los datos de tu vehículo.</md-card-subtitle>\r\n    </md-card-header>\r\n    <md-card-content>\r\n\r\n        <form>\r\n            <div fxLayout=\"column\" fxFlex.sm=\"50%\" fxFlex.xs=\"100%\">\r\n                <div fxLayout=\"row\" fxLayout.xs=\"column\" fxLayout.sm=\"column\" fxLayoutGap.sm=\"0\" fxLayoutGap=\"10px\">\r\n                    <md-select placeholder=\"Marca\" class=\"full-width\">\r\n                        <md-option *ngFor=\"let marca of marcas\" [value]=\"marca.value\">\r\n                            {{marca.label}}\r\n                        </md-option>\r\n                    </md-select>\r\n                    <md-select placeholder=\"Modelo\" class=\"full-width\">\r\n                        <md-option *ngFor=\"let modelo of modelos\" [value]=\"modelo.value\">\r\n                            {{modelo.label}}\r\n                        </md-option>\r\n                    </md-select>\r\n                </div>\r\n                <md-select placeholder=\"Tipo\">\r\n                    <md-option *ngFor=\"let tipo of tipos\" [value]=\"tipo.value\">\r\n                        {{tipo.label}}\r\n                    </md-option>\r\n                </md-select>\r\n                <div fxLayout=\"row\" fxLayoutGap=\"10px\">\r\n                    <md-input-container class=\"full-width\">\r\n                        <input mdInput placeholder=\"Año\" type=\"number\">\r\n                    </md-input-container>\r\n                    <md-select placeholder=\"Uso\" class=\"full-width\">\r\n                        <md-option *ngFor=\"let uso of usos\" [value]=\"uso.value\">\r\n                            {{uso.label}}\r\n                        </md-option>\r\n                    </md-select>\r\n                </div>\r\n                <md-select placeholder=\"Región\">\r\n                    <md-option *ngFor=\"let region of regiones\" [value]=\"region.value\">\r\n                        {{region.label}}\r\n                    </md-option>\r\n                </md-select>\r\n            </div>\r\n        </form>\r\n\r\n        <div fxHide fxShow.lg=\"true\">\r\n            <div style=\"height: 50px;\"></div>\r\n        </div>\r\n    </md-card-content>\r\n    <md-card-actions>\r\n        <button class=\"soat-button\" color=\"accent\" md-button routerLink=\"/buscar-persona\">Continuar</button>\r\n    </md-card-actions>\r\n</md-card>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/car-info/car-info.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_switchMap__ = __webpack_require__("../../../../rxjs/add/operator/switchMap.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_switchMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_switchMap__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CarInfoComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var CarInfoComponent = (function () {
-    function CarInfoComponent(route) {
-        this.route = route;
-        this.marcas = [
-            { value: 'Toyota', label: 'Toyota' },
-            { value: 'Kia', label: 'Kia' },
-            { value: 'Hyundai', label: 'Hyundai' }
-        ];
-        this.modelos = [
-            { value: 'Corolla', label: 'Corolla' },
-            { value: 'Cerato', label: 'Cerato' },
-            { value: 'Elantra', label: 'Elantra' }
-        ];
-        this.tipos = [
-            { value: 'Automovil', label: 'Automovil' },
-            { value: 'Camioneta', label: 'Camioneta' },
-            { value: 'Furgoneta', label: 'Furgoneta' }
-        ];
-        this.usos = [
-            { value: 'Particular', label: 'Particular' },
-            { value: 'Taxi', label: 'Taxi' },
-            { value: 'Carga', label: 'Carga' }
-        ];
-        this.regiones = [
-            { value: 'Lima', label: 'Lima' },
-            { value: 'Arequipa', label: 'Arequipa' }
-        ];
-    }
-    CarInfoComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.route.paramMap
-            .switchMap(function (params) { return params.get('placa'); })
-            .subscribe(function (placa) {
-            _this.placa = (_this.placa || '') + placa;
-        });
-    };
-    return CarInfoComponent;
-}());
-CarInfoComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_12" /* Component */])({
-        selector: 'car-info',
-        template: __webpack_require__("../../../../../src/app/pages/car-info/car-info.component.html")
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* ActivatedRoute */]) === "function" && _a || Object])
-], CarInfoComponent);
-
-var _a;
-//# sourceMappingURL=car-info.component.js.map
 
 /***/ }),
 
@@ -412,7 +333,7 @@ var _a;
 /***/ "../../../../../src/app/pages/coverage/coverage.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n        <div md-card-avatar class=\"accentColor\">\r\n            <md-icon>new_releases</md-icon>\r\n        </div>\r\n        <md-card-title class=\"accentColor\">Cobertura</md-card-title>\r\n        <md-card-subtitle>Te ofrecemos la mejor cobertura del mercado.</md-card-subtitle>\r\n    </md-card-header>\r\n    <md-card-content>\r\n        <md-card class=\"mat-elevation-z5\">\r\n\r\n            <md-card-content>\r\n                <div fxLayout=\"row\" fxLayoutGap=\"20px\" fxLayoutGap.xs=\"10px\" fxLayout.xs=\"column\">\r\n                    <div fxLayout=\"column\" fxLayoutGap=\"10px\" fxFlex=\"60%\">\r\n                        <img fxLayoutAlign=\"center\" fxFlex=\"150px\" fxFlex.xs=\"90px\" src=\"http://www.generaccion.com/noticia/imagenes/grandes/204978-23_10_2015_14_57_58_1037038184.jpg\"\r\n                            alt=\"logo_cobertura\">\r\n                        <span fxLayoutAlign=\"center\">Prima anual</span>\r\n                        <span fxLayoutAlign=\"center\" style=\"font-size:2em;font-weight: bold;\">S/. 85.00</span>\r\n                        <span fxLayoutAlign=\"center\">(incluido IGV)</span>\r\n                    </div>\r\n                    <md-list>\r\n                        <md-list-item *ngFor=\"let cobertura of coberturas\">\r\n                            <md-icon class=\"accentColor\" md-list-icon>check</md-icon>\r\n                            <h5 md-line class=\"accentColor\">{{cobertura.nombre}}</h5>\r\n                            <p md-line> {{cobertura.valor}} </p>\r\n                        </md-list-item>\r\n                    </md-list>\r\n                </div>\r\n\r\n\r\n            </md-card-content>\r\n            <md-card-actions>\r\n                <button md-button>\r\n                    <md-icon>info</md-icon>\r\n                    Detalles\r\n                </button>\r\n            </md-card-actions>\r\n        </md-card>\r\n        <div style=\"margin-top:20px;\">\r\n            <md-checkbox></md-checkbox>\r\n            Declaro haber leído y acepto las\r\n            <a class=\"primaryColor\" style=\"cursor: pointer;\" (click)=\"viewPolicies()\">\r\n            Políticas sobre uso de plataformas de ventas y envío del SOAT Digital por medios electrónicos.\r\n            </a>\r\n        </div>\r\n    </md-card-content>\r\n    <md-card-actions>\r\n        <button class=\"soat-button\" color=\"accent\" md-button routerLink=\"/mail\">Continuar</button>\r\n    </md-card-actions>\r\n</md-card>"
+module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n        <div md-card-avatar class=\"accentColor\">\r\n            <md-icon>new_releases</md-icon>\r\n        </div>\r\n        <md-card-title class=\"accentColor\">Cobertura</md-card-title>\r\n        <md-card-subtitle>Te ofrecemos la mejor cobertura del mercado.</md-card-subtitle>\r\n    </md-card-header>\r\n    <md-card-content>\r\n        <md-card class=\"mat-elevation-z5\">\r\n\r\n            <md-card-content>\r\n                <div fxLayout=\"row\" fxLayoutGap=\"20px\" fxLayoutGap.xs=\"10px\" fxLayout.xs=\"column\">\r\n                    <div fxLayout=\"column\" fxLayoutGap=\"10px\" fxFlex=\"60%\">\r\n                        <img fxLayoutAlign=\"center\" fxFlex=\"150px\" fxFlex.xs=\"90px\" src=\"http://www.generaccion.com/noticia/imagenes/grandes/204978-23_10_2015_14_57_58_1037038184.jpg\"\r\n                            alt=\"logo_cobertura\">\r\n                        <span fxLayoutAlign=\"center\">Prima anual</span>\r\n                        <span fxLayoutAlign=\"center\" style=\"font-size:2em;font-weight: bold;\">S/. 85.00</span>\r\n                        <span fxLayoutAlign=\"center\">(incluido IGV)</span>\r\n                    </div>\r\n                    <md-list>\r\n                        <md-list-item *ngFor=\"let cobertura of coberturas\">\r\n                            <md-icon class=\"accentColor\" md-list-icon>check</md-icon>\r\n                            <h5 md-line class=\"accentColor\">{{cobertura.nombre}}</h5>\r\n                            <p md-line> {{cobertura.valor}} </p>\r\n                        </md-list-item>\r\n                    </md-list>\r\n                </div>\r\n\r\n\r\n            </md-card-content>\r\n            <md-card-actions>\r\n                <button md-button>\r\n                    <md-icon>info</md-icon>\r\n                    Detalles\r\n                </button>\r\n            </md-card-actions>\r\n        </md-card>\r\n        <form>\r\n            <div style=\"margin-top:20px;\">\r\n                <md-checkbox [(ngModel)]=\"acceptPolicies\" name=\"accept\"></md-checkbox>\r\n                Declaro haber leído y acepto las\r\n                <a class=\"primaryColor\" style=\"cursor: pointer;\" (click)=\"viewPolicies()\">\r\n            Políticas sobre uso de plataformas de ventas y envío del SOAT Digital por medios electrónicos.\r\n            </a>\r\n            </div>\r\n        </form>\r\n    </md-card-content>\r\n    <md-card-actions>\r\n        <button class=\"soat-button\" color=\"accent\" md-button [disabled]=\"!acceptPolicies\" routerLink=\"/mail\">Continuar</button>\r\n    </md-card-actions>\r\n</md-card>"
 
 /***/ }),
 
@@ -468,7 +389,7 @@ var _a;
 /***/ "../../../../../src/app/pages/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-content>\r\n        <h1 class=\"homeTitle\">\r\n            <md-icon>directions_car</md-icon>\r\n            SOAT en línea\r\n        </h1>\r\n        <h2 class=\"homeSubTitle\">Tu mejor opción a la hora de comprar tu SOAT con total seguridad.</h2>\r\n        <div fxLayout=\"column\" fxLayoutGap=\"30px\">\r\n            <form>\r\n                <div fxLayout=\"column\" fxLayoutAlign=\"center\">\r\n                    <md-input-container class=\"full-width\">\r\n                        <md-icon mdPrefix>directions_car</md-icon>\r\n                        <input mdInput placeholder=\"Ingresa la placa de tu vehículo\" [(ngModel)]=\"placa\" name=\"placa\">\r\n                    </md-input-container>\r\n                </div>\r\n            </form>\r\n            <div fxLayoutAlign=\"center\">\r\n                <button class=\"soat-button main-button\" color=\"primary\" md-raised-button (click)=\"search()\">Continuar</button>\r\n            </div>\r\n        </div>\r\n        <div fxHide fxShow.lg=\"true\">\r\n            <div style=\"height: 60px;\"></div>\r\n        </div>\r\n    </md-card-content>\r\n</md-card>"
+module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-content>\r\n        <h1 class=\"homeTitle\">\r\n            <md-icon>directions_car</md-icon>\r\n            SOAT en línea\r\n        </h1>\r\n        <h2 class=\"homeSubTitle\">Tu mejor opción a la hora de comprar tu SOAT con total seguridad.</h2>\r\n        <div fxLayout=\"column\" fxLayoutGap=\"30px\">\r\n            <form>\r\n                <div fxLayoutAlign=\"center\">\r\n                    <input type=\"text\" class=\"medium-input\" placeholder=\"Ingresa la placa de tu vehículo\" [(ngModel)]=\"placa\" name=\"placa\" maxlength=\"6\">\r\n                </div>\r\n            </form>\r\n            <div fxLayoutAlign=\"center\">\r\n                <button class=\"soat-button main-button\" [disabled]=\"!placa\" color=\"primary\" md-raised-button (click)=\"search()\">Continuar</button>\r\n            </div>\r\n        </div>\r\n        <div fxHide fxShow.lg=\"true\">\r\n            <div style=\"height: 60px;\"></div>\r\n        </div>\r\n    </md-card-content>\r\n</md-card>"
 
 /***/ }),
 
@@ -513,10 +434,9 @@ var HomeComponent = (function () {
         this.router = router;
     }
     HomeComponent.prototype.ngOnInit = function () {
-        this.placa = 'C8V917';
     };
     HomeComponent.prototype.search = function () {
-        this.router.navigate(['/vehiculo', this.placa]);
+        this.router.navigate(['/vehiculo', this.placa.toUpperCase()]);
     };
     return HomeComponent;
 }());
@@ -526,7 +446,7 @@ HomeComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/pages/home/home.component.html"),
         styles: [__webpack_require__("../../../../../src/app/pages/home/home.component.scss")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object])
 ], HomeComponent);
 
 var _a;
@@ -537,7 +457,7 @@ var _a;
 /***/ "../../../../../src/app/pages/mail/mail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n        <div md-card-avatar class=\"accentColor\">\r\n            <md-icon>mail</md-icon>\r\n        </div>\r\n        <md-card-title class=\"accentColor\">Ingresa tu correo electrónico</md-card-title>\r\n        <md-card-subtitle>Enviaremos tu comprobante de pago y tu certificado SOAT a tu correo electrónico</md-card-subtitle>\r\n    </md-card-header>\r\n    <md-card-content>\r\n        <form>\r\n            <div fxLayout=\"column\" fxLayoutAlign=\"center\">\r\n                <md-input-container>\r\n                    <input mdInput placeholder=\"Correo electrónico\" type=\"email\">\r\n                    <md-error>Ingresa un correo electrónico válido</md-error>\r\n                </md-input-container>\r\n            </div>\r\n        </form>\r\n        <div fxHide fxShow.lg=\"true\">\r\n            <div style=\"height: 190px;\"></div>\r\n        </div>\r\n    </md-card-content>\r\n    <md-card-actions>\r\n        <button class=\"soat-button\" color=\"accent\" md-button routerLink=\"/vigencia\">CONFIRMAR</button>\r\n    </md-card-actions>\r\n</md-card>"
+module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n        <div md-card-avatar class=\"accentColor\">\r\n            <md-icon>mail</md-icon>\r\n        </div>\r\n        <md-card-title class=\"accentColor\">Ingresa tu correo electrónico</md-card-title>\r\n        <md-card-subtitle>Enviaremos tu comprobante de pago y tu certificado SOAT a tu correo electrónico</md-card-subtitle>\r\n    </md-card-header>\r\n    <md-card-content>\r\n        <form>\r\n            <div fxLayout=\"column\" fxLayoutAlign=\"center\">\r\n                <input [(ngModel)]=\"mail\" name=\"mail\" placeholder=\"Correo electrónico\" type=\"email\">\r\n            </div>\r\n        </form>\r\n        <div fxHide fxShow.lg=\"true\">\r\n            <div style=\"height: 190px;\"></div>\r\n        </div>\r\n    </md-card-content>\r\n    <md-card-actions>\r\n        <button class=\"soat-button\" color=\"accent\" [disabled]=\"!mail\" md-button (click)=\"verVigencia()\">CONFIRMAR</button>\r\n    </md-card-actions>\r\n</md-card>"
 
 /***/ }),
 
@@ -546,6 +466,7 @@ module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n     
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MailComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -557,10 +478,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var MailComponent = (function () {
-    function MailComponent() {
+    function MailComponent(router) {
+        this.router = router;
     }
-    MailComponent.prototype.ngOnInit = function () { };
+    MailComponent.prototype.ngOnInit = function () {
+        var data = JSON.parse(sessionStorage.getItem('dt'));
+        if (data && data.ct) {
+            this.mail = data.ct.correo;
+        }
+    };
+    MailComponent.prototype.verVigencia = function () {
+        var data = JSON.parse(sessionStorage.getItem('dt'));
+        data.ct.correo = this.mail;
+        sessionStorage.setItem('dt', JSON.stringify(data));
+        this.router.navigate(['/vigencia']);
+    };
     return MailComponent;
 }());
 MailComponent = __decorate([
@@ -568,9 +502,10 @@ MailComponent = __decorate([
         selector: 'mail',
         template: __webpack_require__("../../../../../src/app/pages/mail/mail.component.html")
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object])
 ], MailComponent);
 
+var _a;
 //# sourceMappingURL=mail.component.js.map
 
 /***/ }),
@@ -592,12 +527,12 @@ MailComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_app_pages_confirm_confirm_component__ = __webpack_require__("../../../../../src/app/pages/confirm/confirm.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_app_pages_confirm_confirm_document_component__ = __webpack_require__("../../../../../src/app/pages/confirm/confirm-document.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_app_pages_validity_validity_component__ = __webpack_require__("../../../../../src/app/pages/validity/validity.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_app_pages_car_info_car_info_component__ = __webpack_require__("../../../../../src/app/pages/car-info/car-info.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_app_pages_search_person_search_person_component__ = __webpack_require__("../../../../../src/app/pages/search-person/search-person.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_app_pages_person_info_person_info_component__ = __webpack_require__("../../../../../src/app/pages/person-info/person-info.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_app_pages_person_info_policies_policies_component__ = __webpack_require__("../../../../../src/app/pages/person-info/policies/policies.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_app_pages_coverage_coverage_component__ = __webpack_require__("../../../../../src/app/pages/coverage/coverage.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_app_pages_coverage_coverage_detail_coverage_detail_component__ = __webpack_require__("../../../../../src/app/pages/coverage/coverage-detail/coverage-detail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_app_pages_search_person_search_person_component__ = __webpack_require__("../../../../../src/app/pages/search-person/search-person.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_app_pages_person_info_person_info_component__ = __webpack_require__("../../../../../src/app/pages/person-info/person-info.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_app_pages_person_info_policies_policies_component__ = __webpack_require__("../../../../../src/app/pages/person-info/policies/policies.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_app_pages_coverage_coverage_component__ = __webpack_require__("../../../../../src/app/pages/coverage/coverage.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_app_pages_coverage_coverage_detail_coverage_detail_component__ = __webpack_require__("../../../../../src/app/pages/coverage/coverage-detail/coverage-detail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_app_pages_vehicle_info_vehicle_info_component__ = __webpack_require__("../../../../../src/app/pages/vehicle-info/vehicle-info.component.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PagesModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -652,12 +587,12 @@ PagesModule = __decorate([
         ],
         exports: [
             __WEBPACK_IMPORTED_MODULE_7_app_pages_home_home_component__["a" /* HomeComponent */],
-            __WEBPACK_IMPORTED_MODULE_13_app_pages_car_info_car_info_component__["a" /* CarInfoComponent */],
-            __WEBPACK_IMPORTED_MODULE_14_app_pages_search_person_search_person_component__["a" /* SearchPersonComponent */],
-            __WEBPACK_IMPORTED_MODULE_15_app_pages_person_info_person_info_component__["a" /* PersonInfoComponent */],
-            __WEBPACK_IMPORTED_MODULE_16_app_pages_person_info_policies_policies_component__["a" /* PoliciesComponent */],
-            __WEBPACK_IMPORTED_MODULE_17_app_pages_coverage_coverage_component__["a" /* CoverageComponent */],
-            __WEBPACK_IMPORTED_MODULE_18_app_pages_coverage_coverage_detail_coverage_detail_component__["a" /* CoverageDetailComponent */],
+            __WEBPACK_IMPORTED_MODULE_18_app_pages_vehicle_info_vehicle_info_component__["a" /* VehicleInfoComponent */],
+            __WEBPACK_IMPORTED_MODULE_13_app_pages_search_person_search_person_component__["a" /* SearchPersonComponent */],
+            __WEBPACK_IMPORTED_MODULE_14_app_pages_person_info_person_info_component__["a" /* PersonInfoComponent */],
+            __WEBPACK_IMPORTED_MODULE_15_app_pages_person_info_policies_policies_component__["a" /* PoliciesComponent */],
+            __WEBPACK_IMPORTED_MODULE_16_app_pages_coverage_coverage_component__["a" /* CoverageComponent */],
+            __WEBPACK_IMPORTED_MODULE_17_app_pages_coverage_coverage_detail_coverage_detail_component__["a" /* CoverageDetailComponent */],
             __WEBPACK_IMPORTED_MODULE_8_app_pages_mail_mail_component__["a" /* MailComponent */],
             __WEBPACK_IMPORTED_MODULE_12_app_pages_validity_validity_component__["a" /* ValidityComponent */],
             __WEBPACK_IMPORTED_MODULE_9_app_pages_purchase_purchase_component__["a" /* PurchaseComponent */],
@@ -666,19 +601,19 @@ PagesModule = __decorate([
         ],
         declarations: [
             __WEBPACK_IMPORTED_MODULE_7_app_pages_home_home_component__["a" /* HomeComponent */],
-            __WEBPACK_IMPORTED_MODULE_13_app_pages_car_info_car_info_component__["a" /* CarInfoComponent */],
-            __WEBPACK_IMPORTED_MODULE_14_app_pages_search_person_search_person_component__["a" /* SearchPersonComponent */],
-            __WEBPACK_IMPORTED_MODULE_15_app_pages_person_info_person_info_component__["a" /* PersonInfoComponent */],
-            __WEBPACK_IMPORTED_MODULE_16_app_pages_person_info_policies_policies_component__["a" /* PoliciesComponent */],
-            __WEBPACK_IMPORTED_MODULE_17_app_pages_coverage_coverage_component__["a" /* CoverageComponent */],
-            __WEBPACK_IMPORTED_MODULE_18_app_pages_coverage_coverage_detail_coverage_detail_component__["a" /* CoverageDetailComponent */],
+            __WEBPACK_IMPORTED_MODULE_18_app_pages_vehicle_info_vehicle_info_component__["a" /* VehicleInfoComponent */],
+            __WEBPACK_IMPORTED_MODULE_13_app_pages_search_person_search_person_component__["a" /* SearchPersonComponent */],
+            __WEBPACK_IMPORTED_MODULE_14_app_pages_person_info_person_info_component__["a" /* PersonInfoComponent */],
+            __WEBPACK_IMPORTED_MODULE_15_app_pages_person_info_policies_policies_component__["a" /* PoliciesComponent */],
+            __WEBPACK_IMPORTED_MODULE_16_app_pages_coverage_coverage_component__["a" /* CoverageComponent */],
+            __WEBPACK_IMPORTED_MODULE_17_app_pages_coverage_coverage_detail_coverage_detail_component__["a" /* CoverageDetailComponent */],
             __WEBPACK_IMPORTED_MODULE_8_app_pages_mail_mail_component__["a" /* MailComponent */],
             __WEBPACK_IMPORTED_MODULE_12_app_pages_validity_validity_component__["a" /* ValidityComponent */],
             __WEBPACK_IMPORTED_MODULE_9_app_pages_purchase_purchase_component__["a" /* PurchaseComponent */],
             __WEBPACK_IMPORTED_MODULE_10_app_pages_confirm_confirm_component__["a" /* ConfirmComponent */],
             __WEBPACK_IMPORTED_MODULE_11_app_pages_confirm_confirm_document_component__["a" /* ConfirmDocumentComponent */]
         ],
-        entryComponents: [__WEBPACK_IMPORTED_MODULE_18_app_pages_coverage_coverage_detail_coverage_detail_component__["a" /* CoverageDetailComponent */], __WEBPACK_IMPORTED_MODULE_11_app_pages_confirm_confirm_document_component__["a" /* ConfirmDocumentComponent */], __WEBPACK_IMPORTED_MODULE_16_app_pages_person_info_policies_policies_component__["a" /* PoliciesComponent */]],
+        entryComponents: [__WEBPACK_IMPORTED_MODULE_17_app_pages_coverage_coverage_detail_coverage_detail_component__["a" /* CoverageDetailComponent */], __WEBPACK_IMPORTED_MODULE_11_app_pages_confirm_confirm_document_component__["a" /* ConfirmDocumentComponent */], __WEBPACK_IMPORTED_MODULE_15_app_pages_person_info_policies_policies_component__["a" /* PoliciesComponent */]],
         providers: [],
     })
 ], PagesModule);
@@ -690,7 +625,7 @@ PagesModule = __decorate([
 /***/ "../../../../../src/app/pages/person-info/person-info.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n        <div md-card-avatar class=\"accentColor\">\r\n            <md-icon>face</md-icon>\r\n        </div>\r\n        <md-card-title class=\"accentColor\">Datos del contratante</md-card-title>\r\n        <md-card-subtitle>Verifica y completa tus datos.</md-card-subtitle>\r\n    </md-card-header>\r\n    <md-card-content>\r\n\r\n        <form>\r\n            <div fxLayout=\"column\" fxFlex.sm=\"50%\" fxFlex.xs=\"100%\">\r\n                <md-input-container class=\"full-width\">\r\n                    <input mdInput placeholder=\"Nombres\">\r\n                </md-input-container>\r\n                <div fxLayout=\"row\" fxLayout.xs=\"column\" fxLayout.sm=\"column\" fxLayoutGap.sm=\"0\" fxLayoutGap=\"10px\">\r\n                    <md-input-container class=\"full-width\">\r\n                        <input mdInput placeholder=\"Apellido Paterno\">\r\n                    </md-input-container>\r\n                    <md-input-container class=\"full-width\">\r\n                        <input mdInput placeholder=\"Apellido Materno\">\r\n                    </md-input-container>\r\n                </div>\r\n                <div fxLayout=\"row\" fxLayout.xs=\"column\" fxLayout.sm=\"column\" fxLayoutGap.sm=\"0\" fxLayoutGap=\"10px\">\r\n                    <md-input-container class=\"full-width\">\r\n                        <input mdInput placeholder=\"Dirección\">\r\n                    </md-input-container>\r\n                    <md-select placeholder=\"Departamento\" class=\"full-width\">\r\n                        <md-option *ngFor=\"let departamento of departamentos\" [value]=\"departamento.value\">\r\n                            {{departamento.label}}\r\n                        </md-option>\r\n                    </md-select>\r\n                </div>\r\n                <div fxLayout=\"row\" fxLayout.xs=\"column\" fxLayout.sm=\"column\" fxLayoutGap.sm=\"0\" fxLayoutGap=\"10px\">\r\n                    <md-select placeholder=\"Provincia\" class=\"full-width\">\r\n                        <md-option *ngFor=\"let provincia of provincias\" [value]=\"provincia.value\">\r\n                            {{provincia.label}}\r\n                        </md-option>\r\n                    </md-select>\r\n                    <md-select placeholder=\"Distrito\" class=\"full-width\">\r\n                        <md-option *ngFor=\"let distrito of distritos\" [value]=\"distrito.value\">\r\n                            {{distrito.label}}\r\n                        </md-option>\r\n                    </md-select>\r\n                </div>\r\n                <md-input-container class=\"full-width\">\r\n                    <input mdInput placeholder=\"Correo electrónico\" type=\"email\">\r\n                </md-input-container>\r\n                <md-input-container class=\"full-width\">\r\n                    <input mdInput placeholder=\"Celular\" type=\"number\">\r\n                </md-input-container>\r\n                <div>\r\n                    <md-checkbox></md-checkbox>\r\n                    Declaro haber leído y acepto las\r\n                    <a class=\"primaryColor\" style=\"cursor: pointer;\" (click)=\"viewPolicies()\">Políticas sobre la protección de datos personales</a>\r\n                </div>\r\n            </div>\r\n        </form>\r\n    </md-card-content>\r\n    <md-card-actions>\r\n        <button class=\"soat-button\" color=\"accent\" md-button routerLink=\"/cobertura\">Continuar</button>\r\n    </md-card-actions>\r\n</md-card>"
+module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n        <div md-card-avatar class=\"accentColor\">\r\n            <md-icon>face</md-icon>\r\n        </div>\r\n        <md-card-title class=\"accentColor\">Datos del contratante</md-card-title>\r\n        <md-card-subtitle>Verifica y completa tus datos.</md-card-subtitle>\r\n    </md-card-header>\r\n    <md-card-content>\r\n\r\n        <form>\r\n            <div fxLayout=\"column\" fxFlex.sm=\"50%\" fxFlex.xs=\"100%\" fxLayoutGap=\"10px\">\r\n                <input placeholder=\"Nombres\" type=\"text\" [(ngModel)]=\"person.nombres\" name=\"nombres\">\r\n                <div fxLayout=\"row\" fxLayout.xs=\"column\" fxLayout.sm=\"column\" fxLayoutGap.sm=\"0\" fxLayoutGap=\"10px\">\r\n                    <input type=\"text\" [(ngModel)]=\"person.apellidoPaterno\" name=\"apellidoPaterno\" placeholder=\"Apellido Paterno\">\r\n                    <input type=\"text\" [(ngModel)]=\"person.apellidoMaterno \" name=\"apellidoMaterno\" placeholder=\"Apellido Materno\">\r\n                </div>\r\n                <div fxLayout=\"row\" fxLayout.xs=\"column\" fxLayout.sm=\"column\" fxLayoutGap.sm=\"0\" fxLayoutGap=\"10px\">\r\n                    <input type=\"text\" [(ngModel)]=\"person.direccion\" name=\"direccion\" placeholder=\"Dirección\">\r\n                    <select [(ngModel)]=\"person.departamento\" name=\"departamento\">\r\n                        <option value=\"\">Selecciona el departamento</option>\r\n                        <option *ngFor=\"let departamento of departamentos\" [value]=\"departamento.value\">\r\n                            {{departamento.label}}\r\n                        </option>\r\n                    </select>\r\n                </div>\r\n                <div fxLayout=\"row\" fxLayout.xs=\"column\" fxLayout.sm=\"column\" fxLayoutGap.sm=\"0\" fxLayoutGap=\"10px\">\r\n                    <select [(ngModel)]=\"person.provincia\" name=\"provincia\">\r\n                            <option value=\"\">Selecciona la provincia</option>\r\n                            <option *ngFor=\"let provincia of provincias\" [value]=\"provincia.value\">\r\n                                {{provincia.label}}\r\n                            </option>\r\n                        </select>\r\n                    <select [(ngModel)]=\"person.distrito\" name=\"distrito\">\r\n                            <option value=\"\">Selecciona la provincia</option>\r\n                            <option *ngFor=\"let distrito of distritos\" [value]=\"distrito.value\">\r\n                                    {{distrito.label}}\r\n                            </option>\r\n                        </select>\r\n                </div>\r\n                <input [(ngModel)]=\"person.correo\" name=\"correo\" placeholder=\"Correo electrónico\" type=\"email\">\r\n                <input [(ngModel)]=\"person.celular\" name=\"celular\" placeholder=\"Celular\" type=\"number\">\r\n                <div>\r\n                    <md-checkbox [(ngModel)]=\"acceptPolicies\" name=\"acceptPolicies\"></md-checkbox>\r\n                    Declaro haber leído y acepto las\r\n                    <a class=\"primaryColor\" style=\"cursor: pointer;\" (click)=\"viewPolicies()\">Políticas sobre la protección de datos personales</a>\r\n                </div>\r\n            </div>\r\n        </form>\r\n    </md-card-content>\r\n    <md-card-actions>\r\n        <button class=\"soat-button\" color=\"accent\" md-button [disabled]=\"!acceptPolicies\" (click)=\"verCobertura()\">Continuar</button>\r\n    </md-card-actions>\r\n</md-card>"
 
 /***/ }),
 
@@ -703,8 +638,7 @@ module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n     
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_switchMap__ = __webpack_require__("../../../../rxjs/add/operator/switchMap.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_switchMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_switchMap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_app_pages_person_info_shared_person_query__ = __webpack_require__("../../../../../src/app/pages/person-info/shared/person-query.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_app_pages_person_info_policies_policies_component__ = __webpack_require__("../../../../../src/app/pages/person-info/policies/policies.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_app_pages_person_info_policies_policies_component__ = __webpack_require__("../../../../../src/app/pages/person-info/policies/policies.component.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PersonInfoComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -720,25 +654,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var PersonInfoComponent = (function () {
-    function PersonInfoComponent(route, dialog) {
+    function PersonInfoComponent(route, dialog, router) {
         this.route = route;
         this.dialog = dialog;
+        this.router = router;
         this.departamentos = [
-            { value: 'Lima', label: 'Lima' },
-            { value: 'Arequipa', label: 'Arequipa' },
-            { value: 'La Libertad', label: 'La Libertad' }
+            { value: '1', label: 'Lima' },
+            { value: '2', label: 'Arequipa' },
+            { value: '3', label: 'La Libertad' }
         ];
         this.provincias = [
-            { value: 'Lima', label: 'Lima' },
-            { value: 'Barranca', label: 'Barranca' },
-            { value: 'Cajatambo', label: 'Cajatambo' }
+            { value: '1', label: 'Lima' },
+            { value: '2', label: 'Barranca' },
+            { value: '3', label: 'Cajatambo' }
         ];
         this.distritos = [
-            { value: 'Lima', label: 'Lima' },
-            { value: 'Miraflores', label: 'Miraflores' },
-            { value: 'San Isidro', label: 'San Isidro' }
+            { value: '1', label: 'Lima' },
+            { value: '2', label: 'Miraflores' },
+            { value: '3', label: 'San Isidro' }
         ];
     }
     PersonInfoComponent.prototype.ngOnInit = function () {
@@ -747,17 +681,33 @@ var PersonInfoComponent = (function () {
             .subscribe(function (param) {
             var tipoDoc = param.get('tipo_documento');
             var doc = param.get('documento');
-            _this.query = _this.getPersonQuery(tipoDoc, doc);
+            _this.query = { numeroDocumento: doc, tipoDocumento: tipoDoc };
+            _this.loadPerson();
         });
     };
-    PersonInfoComponent.prototype.getPersonQuery = function (tipoDoc, doc) {
-        var personQuery = new __WEBPACK_IMPORTED_MODULE_4_app_pages_person_info_shared_person_query__["a" /* PersonQuery */]();
-        personQuery.numeroDocumento = doc;
-        personQuery.tipoDocumento = tipoDoc;
-        return personQuery;
+    PersonInfoComponent.prototype.loadPerson = function () {
+        this.person = {
+            tipoDocumento: this.query.tipoDocumento,
+            numeroDocumento: this.query.numeroDocumento,
+            nombres: 'Lorenzo',
+            apellidoPaterno: 'Palacios',
+            apellidoMaterno: 'Quispe',
+            celular: '989898781',
+            correo: 'lorenzo@latinmail.com',
+            departamento: '1',
+            direccion: 'Av las magnolias 387 La Victoria',
+            distrito: '1',
+            provincia: '1'
+        };
     };
     PersonInfoComponent.prototype.viewPolicies = function () {
-        this.dialog.open(__WEBPACK_IMPORTED_MODULE_5_app_pages_person_info_policies_policies_component__["a" /* PoliciesComponent */]);
+        this.dialog.open(__WEBPACK_IMPORTED_MODULE_4_app_pages_person_info_policies_policies_component__["a" /* PoliciesComponent */]);
+    };
+    PersonInfoComponent.prototype.verCobertura = function () {
+        var data = JSON.parse(sessionStorage.getItem('dt'));
+        data.ct = this.person;
+        sessionStorage.setItem('dt', JSON.stringify(data));
+        this.router.navigate(['/cobertura']);
     };
     return PersonInfoComponent;
 }());
@@ -766,10 +716,10 @@ PersonInfoComponent = __decorate([
         selector: 'person-info',
         template: __webpack_require__("../../../../../src/app/pages/person-info/person-info.component.html")
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["p" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["p" /* MdDialog */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["p" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["p" /* MdDialog */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _c || Object])
 ], PersonInfoComponent);
 
-var _a, _b;
+var _a, _b, _c;
 //# sourceMappingURL=person-info.component.js.map
 
 /***/ }),
@@ -819,25 +769,10 @@ var _a;
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/person-info/shared/person-query.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PersonQuery; });
-var PersonQuery = (function () {
-    function PersonQuery() {
-    }
-    return PersonQuery;
-}());
-
-//# sourceMappingURL=person-query.js.map
-
-/***/ }),
-
 /***/ "../../../../../src/app/pages/purchase/purchase.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n        <div md-card-avatar class=\"accentColor\">\r\n            <md-icon>local_atm</md-icon>\r\n        </div>\r\n        <md-card-title class=\"accentColor\">Pagar</md-card-title>\r\n        <md-card-subtitle>Ingresa la siguiente nformación para realizar el pago de tu SOAT.</md-card-subtitle>\r\n    </md-card-header>\r\n    <md-card-content>\r\n        <form>\r\n            <div fxLayout=\"column\" fxLayoutGap=\"10px\">\r\n                <div fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutGap=\"10px\">\r\n                    <md-input-container class=\"full-width\">\r\n                        <md-icon mdPrefix>credit_card</md-icon>\r\n                        <input mdInput placeholder=\"Tarjeta de Crédito o Débito\" type=\"number\">\r\n                    </md-input-container>\r\n                    <md-input-container class=\"full-width\">\r\n                        <md-icon mdPrefix>today</md-icon>\r\n                        <input mdInput placeholder=\"Fecha de expiración (mes/año)\" pattern=\"/[\\d]{2} \\/ [\\d]{4}/\">\r\n                    </md-input-container>\r\n                </div>\r\n                <div fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutGap=\"10px\">\r\n                    <md-input-container class=\"full-width\">\r\n                        <md-icon mdPrefix>security</md-icon>\r\n                        <input mdInput placeholder=\"Código de seguridad\" type=\"number\">\r\n                    </md-input-container>\r\n\r\n                    <md-input-container class=\"full-width\">\r\n                        <md-icon mdPrefix>face</md-icon>\r\n                        <input mdInput placeholder=\"Nombre del Titular\">\r\n                    </md-input-container>\r\n                </div>\r\n            </div>\r\n        </form>\r\n        <div fxHide fxShow.lg=\"true\">\r\n            <div style=\"height: 100px;\"></div>\r\n        </div>\r\n    </md-card-content>\r\n    <md-card-actions>\r\n        <button class=\"soat-button\" color=\"accent\" md-button routerLink=\"/confirm\">Pagar</button>\r\n    </md-card-actions>\r\n</md-card>"
+module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n        <div md-card-avatar class=\"accentColor\">\r\n            <md-icon>local_atm</md-icon>\r\n        </div>\r\n        <md-card-title class=\"accentColor\">Pagar</md-card-title>\r\n        <md-card-subtitle>Ingresa la siguiente nformación para realizar el pago de tu SOAT.</md-card-subtitle>\r\n    </md-card-header>\r\n    <md-card-content>\r\n        <form>\r\n            <div fxLayout=\"column\" fxLayoutGap=\"10px\">\r\n                <div fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutGap=\"10px\">\r\n                    <md-input-container class=\"full-width\">\r\n                        <md-icon mdPrefix>credit_card</md-icon>\r\n                        <input mdInput placeholder=\"Tarjeta de Crédito o Débito\">\r\n                    </md-input-container>\r\n                    <md-input-container class=\"full-width\">\r\n                        <md-icon mdPrefix>today</md-icon>\r\n                        <input mdInput placeholder=\"Fecha de expiración (mes/año)\" pattern=\"/[\\d]{2} \\/ [\\d]{4}/\">\r\n                    </md-input-container>\r\n                </div>\r\n                <div fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutGap=\"10px\">\r\n                    <md-input-container class=\"full-width\">\r\n                        <md-icon mdPrefix>security</md-icon>\r\n                        <input mdInput placeholder=\"Código de seguridad\">\r\n                    </md-input-container>\r\n\r\n                    <md-input-container class=\"full-width\">\r\n                        <md-icon mdPrefix>face</md-icon>\r\n                        <input mdInput placeholder=\"Nombre del Titular\">\r\n                    </md-input-container>\r\n                </div>\r\n            </div>\r\n        </form>\r\n        <div fxHide fxShow.lg=\"true\">\r\n            <div style=\"height: 100px;\"></div>\r\n        </div>\r\n    </md-card-content>\r\n    <md-card-actions>\r\n        <button class=\"soat-button\" color=\"accent\" md-button routerLink=\"/confirm\">Pagar</button>\r\n    </md-card-actions>\r\n</md-card>"
 
 /***/ }),
 
@@ -878,7 +813,7 @@ PurchaseComponent = __decorate([
 /***/ "../../../../../src/app/pages/search-person/search-person.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n        <div md-card-avatar class=\"accentColor\">\r\n            <md-icon>face</md-icon>\r\n        </div>\r\n        <md-card-title class=\"accentColor\">Ingresa tu tipo y número de documento</md-card-title>\r\n        <md-card-subtitle>Buscaremos tus datos de acuerdo al tipo y número de documento. </md-card-subtitle>\r\n    </md-card-header>\r\n    <md-card-content>\r\n        <form>\r\n            <div fxLayout=\"column\">\r\n                <md-select placeholder=\"Tipo de documento\" class=\"full-width\" [(ngModel)]=\"tipoDocumento\" name=\"tipoDocumento\">\r\n                    <md-option *ngFor=\"let tipodoc of tipodocs\" [value]=\"tipodoc.value\">\r\n                        {{tipodoc.label}}\r\n                    </md-option>\r\n                </md-select>\r\n                <md-input-container class=\"full-width\">\r\n                    <input mdInput placeholder=\"Número de documento\" [(ngModel)]=\"numeroDocumento\" name=\"numeroDocumento\" type=\"number\">\r\n                </md-input-container>\r\n            </div>\r\n        </form>\r\n\r\n        <div fxHide fxShow.lg=\"true\">\r\n            <div style=\"height: 100px;\"></div>\r\n        </div>\r\n    </md-card-content>\r\n    <md-card-actions>\r\n        <button class=\"soat-button\" color=\"accent\" md-button (click)=\"search()\">Continuar</button>\r\n    </md-card-actions>\r\n</md-card>"
+module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n        <div md-card-avatar class=\"accentColor\">\r\n            <md-icon>face</md-icon>\r\n        </div>\r\n        <md-card-title class=\"accentColor\">Ingresa tu tipo y número de documento</md-card-title>\r\n        <md-card-subtitle>Buscaremos tus datos de acuerdo al tipo y número de documento. </md-card-subtitle>\r\n    </md-card-header>\r\n    <md-card-content>\r\n        <form>\r\n            <div fxLayout=\"column\" fxLayoutGap=\"10px\">\r\n                <select [(ngModel)]=\"tipoDocumento\" name=\"tipoDocumento\">\r\n                    <option value=\"\">Selecciona el tipo de documento</option>\r\n                    <option *ngFor=\"let tipodoc of tipodocs\" [value]=\"tipodoc.value\">{{tipodoc.label}}</option>\r\n                </select>\r\n                <input placeholder=\"Número de documento\" [(ngModel)]=\"numeroDocumento\" name=\"numeroDocumento\" type=\"number\">\r\n            </div>\r\n        </form>\r\n\r\n        <div fxHide fxShow.lg=\"true\">\r\n            <div style=\"height: 100px;\"></div>\r\n        </div>\r\n    </md-card-content>\r\n    <md-card-actions>\r\n        <button class=\"soat-button\" color=\"accent\" md-button [disabled]=\"!tipoDocumento || !numeroDocumento\" (click)=\"search()\">Continuar</button>\r\n    </md-card-actions>\r\n</md-card>"
 
 /***/ }),
 
@@ -903,9 +838,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var SearchPersonComponent = (function () {
     function SearchPersonComponent(router) {
         this.router = router;
+        this.tipoDocumento = "";
         this.tipodocs = [
-            { label: 'DNI', value: 'dni' },
-            { label: 'RUC', value: 'ruc' }
+            { label: 'DNI', value: '1' },
+            { label: 'OTRO', value: '2' }
         ];
     }
     SearchPersonComponent.prototype.ngOnInit = function () {
@@ -926,7 +862,7 @@ SearchPersonComponent = __decorate([
         selector: 'search-person',
         template: __webpack_require__("../../../../../src/app/pages/search-person/search-person.component.html")
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object])
 ], SearchPersonComponent);
 
 var _a;
@@ -937,7 +873,7 @@ var _a;
 /***/ "../../../../../src/app/pages/validity/validity.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n        <div md-card-avatar class=\"accentColor\">\r\n            <md-icon>today</md-icon>\r\n        </div>\r\n        <md-card-title class=\"accentColor\">Inicio de vigencia</md-card-title>\r\n        <md-card-subtitle>Selecciona la fecha de inicio de vigencia. El último SOAT activo que tenemos registrado vence el 31/01/2017</md-card-subtitle>\r\n    </md-card-header>\r\n    <md-card-content>\r\n        <form>\r\n            <div fxLayout=\"column\" fxLayoutAlign=\"center\">\r\n                <md-input-container class=\"full-width\">\r\n                    <md-icon mdPrefix>today</md-icon>\r\n                    <input mdInput [mdDatepicker]=\"picker\" (focus)=\"picker.open()\" placeholder=\"Fecha de expiración\">\r\n                </md-input-container>\r\n                <md-datepicker #picker touchUi=\"true\"></md-datepicker>\r\n            </div>\r\n        </form>\r\n        <div fxHide fxShow.lg=\"true\">\r\n            <div style=\"height: 170px;\"></div>\r\n        </div>\r\n    </md-card-content>\r\n    <md-card-actions>\r\n        <button class=\"soat-button\" color=\"accent\" md-button routerLink=\"/pagar\">CONFIRMAR</button>\r\n    </md-card-actions>\r\n</md-card>"
+module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n        <div md-card-avatar class=\"accentColor\">\r\n            <md-icon>today</md-icon>\r\n        </div>\r\n        <md-card-title class=\"accentColor\">Inicio de vigencia</md-card-title>\r\n        <md-card-subtitle>Selecciona la fecha de inicio de vigencia. El último SOAT activo que tenemos registrado vence el {{finVigencia |\r\n            date:'dd/MM/yyyy'}}\r\n        </md-card-subtitle>\r\n    </md-card-header>\r\n    <md-card-content>\r\n        <form>\r\n            <div fxLayout=\"column\" fxLayoutAlign=\"center\">\r\n                <input type=\"text\" [min]=\"minDate\" name=\"inicioVigencia\" [(ngModel)]=\"inicioVigencia\" [mdDatepicker]=\"picker\" (focus)=\"picker.open()\"\r\n                    placeholder=\"Fecha de expiración\">\r\n\r\n                <md-datepicker #picker touchUi=\"true\" [startAt]=\"inicioVigencia\"></md-datepicker>\r\n                <p>Su nuevo fin de vigencia es <strong>{{ nuevoFinVigencia |date:'dd/MM/yyyy'}}</strong></p>\r\n            </div>\r\n        </form>\r\n        <div fxHide fxShow.lg=\"true\">\r\n            <div style=\"height: 170px;\"></div>\r\n        </div>\r\n    </md-card-content>\r\n    <md-card-actions>\r\n        <button class=\"soat-button\" color=\"accent\" md-button routerLink=\"/pagar\">CONFIRMAR</button>\r\n    </md-card-actions>\r\n</md-card>"
 
 /***/ }),
 
@@ -959,8 +895,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var ValidityComponent = (function () {
     function ValidityComponent() {
+        this.minDate = new Date();
     }
-    ValidityComponent.prototype.ngOnInit = function () { };
+    ValidityComponent.prototype.ngOnInit = function () {
+        var data = JSON.parse(sessionStorage.getItem('dt'));
+        if (data && data.vh) {
+            this.finVigencia = data.vh.finVigencia || new Date();
+            this.inicioVigencia = data.vh.finVigencia || new Date();
+            if (this.inicioVigencia < new Date()) {
+                this.inicioVigencia = new Date();
+            }
+            else if (this.inicioVigencia === new Date()) {
+                this.inicioVigencia = new Date();
+                this.inicioVigencia.setDate(this.inicioVigencia.getDate() + 1);
+            }
+            else {
+                this.inicioVigencia = new Date();
+            }
+        }
+    };
+    Object.defineProperty(ValidityComponent.prototype, "nuevoFinVigencia", {
+        get: function () {
+            var nuevoFin = this.inicioVigencia;
+            var year = nuevoFin.getFullYear();
+            var month = nuevoFin.getMonth();
+            var day = nuevoFin.getDate();
+            return new Date(year + 1, month, day);
+        },
+        enumerable: true,
+        configurable: true
+    });
     return ValidityComponent;
 }());
 ValidityComponent = __decorate([
@@ -972,6 +936,113 @@ ValidityComponent = __decorate([
 ], ValidityComponent);
 
 //# sourceMappingURL=validity.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/vehicle-info/shared/vehicle.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Vehicle; });
+var Vehicle = (function () {
+    function Vehicle() {
+    }
+    return Vehicle;
+}());
+
+//# sourceMappingURL=vehicle.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/vehicle-info/vehicle-info.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n        <div md-card-avatar class=\"accentColor\">\r\n            <md-icon>directions_car</md-icon>\r\n        </div>\r\n        <md-card-title class=\"accentColor\">Datos del vehículo : {{placa}}</md-card-title>\r\n        <md-card-subtitle>Verifica y completa los datos de tu vehículo.</md-card-subtitle>\r\n    </md-card-header>\r\n    <md-card-content>\r\n\r\n        <form>\r\n            <div fxLayout=\"column\" fxFlex.sm=\"50%\" fxFlex.xs=\"100%\" fxLayoutGap=\"10px\">\r\n                <div fxLayout=\"row\" fxLayout.xs=\"column\" fxLayout.sm=\"column\" fxLayoutGap.sm=\"0\" fxLayoutGap=\"10px\">\r\n                    <select class=\"full-width\" [(ngModel)]=\"vehicle.marca\" name=\"marca\">\r\n                        <option>Selecciona la marca</option>\r\n                        <option *ngFor=\"let marca of marcas\" [value]=\"marca.value\">{{marca.label}}</option>\r\n                    </select>\r\n\r\n                    <select class=\"full-width\" [(ngModel)]=\"vehicle.modelo\" name=\"modelo\">\r\n                        <option>Selecciona el modelo</option>\r\n                        <option *ngFor=\"let modelo of modelos\" [value]=\"modelo.value\">{{modelo.label}}</option>\r\n                    </select>\r\n                </div>\r\n                <select class=\"full-width\" [(ngModel)]=\"vehicle.tipo\" name=\"tipo\">\r\n                    <option>Selecciona el tipo</option>\r\n                    <option *ngFor=\"let tipo of tipos\" [value]=\"tipo.value\">{{tipo.label}}</option>\r\n                </select>\r\n                <div fxLayout=\"row\" fxLayoutGap=\"10px\" fxLayout.xs=\"column\">\r\n                    <input [(ngModel)]=\"vehicle.anio\" name=\"anio\" placeholder=\"Año\" type=\"number\" maxlength=\"4\">\r\n                    <select class=\"full-width\" [(ngModel)]=\"vehicle.uso\" name=\"uso\">\r\n                        <option>Selecciona el uso</option>\r\n                        <option *ngFor=\"let uso of usos\" [value]=\"uso.value\">{{uso.label}}</option>\r\n                    </select>\r\n                </div>\r\n                <select class=\"full-width\" [(ngModel)]=\"vehicle.region\" name=\"region\">\r\n                    <option>Selecciona la Región</option>\r\n                    <option *ngFor=\"let region of regiones\" [value]=\"region.value\">{{region.label}}</option>\r\n                </select>\r\n            </div>\r\n        </form>\r\n\r\n        <div fxHide fxShow.lg=\"true\">\r\n            <div style=\"height: 50px;\"></div>\r\n        </div>\r\n    </md-card-content>\r\n    <md-card-actions>\r\n        <button class=\"soat-button\" color=\"accent\" md-button (click)=\"buscarPersona()\">Continuar</button>\r\n    </md-card-actions>\r\n</md-card>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/vehicle-info/vehicle-info.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_switchMap__ = __webpack_require__("../../../../rxjs/add/operator/switchMap.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_switchMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_switchMap__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_pages_vehicle_info_shared_vehicle__ = __webpack_require__("../../../../../src/app/pages/vehicle-info/shared/vehicle.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VehicleInfoComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var VehicleInfoComponent = (function () {
+    function VehicleInfoComponent(route, router) {
+        this.route = route;
+        this.router = router;
+        this.marcas = [
+            { value: '1', label: 'Toyota' },
+            { value: '2', label: 'Kia' },
+            { value: '3', label: 'Hyundai' }
+        ];
+        this.modelos = [
+            { value: '1', label: 'Corolla' },
+            { value: '2', label: 'Cerato' },
+            { value: '3', label: 'Elantra' }
+        ];
+        this.tipos = [
+            { value: '1', label: 'Automovil' },
+            { value: '2', label: 'Camioneta' },
+            { value: '3', label: 'Furgoneta' }
+        ];
+        this.usos = [
+            { value: '1', label: 'Particular' },
+            { value: '2', label: 'Taxi' },
+            { value: '3', label: 'Carga' }
+        ];
+        this.regiones = [
+            { value: '1', label: 'Lima' },
+            { value: '2', label: 'Arequipa' }
+        ];
+    }
+    VehicleInfoComponent.prototype.ngOnInit = function () {
+        this.placa = this.route.snapshot.paramMap.get('placa');
+        this.vehicle = new __WEBPACK_IMPORTED_MODULE_3_app_pages_vehicle_info_shared_vehicle__["a" /* Vehicle */]();
+        this.vehicle.anio = 2010;
+        this.vehicle.marca = '2';
+        this.vehicle.modelo = '2';
+        this.vehicle.placa = this.placa;
+        this.vehicle.region = '2';
+        this.vehicle.tipo = '1';
+        this.vehicle.uso = '2';
+        this.vehicle.finVigencia = new Date(2015, 2, 29);
+    };
+    VehicleInfoComponent.prototype.buscarPersona = function () {
+        var data = { vh: this.vehicle, ct: null };
+        sessionStorage.clear();
+        sessionStorage.setItem('dt', JSON.stringify(data));
+        this.router.navigate(['/buscar-persona']);
+    };
+    return VehicleInfoComponent;
+}());
+VehicleInfoComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_12" /* Component */])({
+        selector: 'vehicle-info',
+        template: __webpack_require__("../../../../../src/app/pages/vehicle-info/vehicle-info.component.html")
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object])
+], VehicleInfoComponent);
+
+var _a, _b;
+//# sourceMappingURL=vehicle-info.component.js.map
 
 /***/ }),
 
