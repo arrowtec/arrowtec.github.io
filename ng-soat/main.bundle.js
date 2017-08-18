@@ -175,7 +175,7 @@ AppModule = __decorate([
 /***/ "../../../../../src/app/pages/confirm/confirm-document.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<object data=\"assets/docs/SOAT_ELECTRONICO.pdf\" width=\"400px\" height=\"500px\" type='application/pdf'>\r\n   <a href=\"assets/docs/SOAT_ELECTRONICO.pdf\" target=\"_blank\">Descarga tu documento</a>\r\n </object>"
+module.exports = "<object data=\"assets/docs/SOAT_ELECTRONICO.pdf\" width=\"400px\" height=\"500px\" type='application/pdf'>\r\n  <object data=\"assets/docs/detalles.jpg\"  type='application/jpg'>\r\n   <a href=\"assets/docs/SOAT_ELECTRONICO.pdf\" target=\"_blank\">Descarga tu documento</a>\r\n </object>"
 
 /***/ }),
 
@@ -220,7 +220,7 @@ var _a;
 /***/ "../../../../../src/app/pages/confirm/confirm.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n        <div md-card-avatar class=\"accentColor\">\r\n            <md-icon>thumb_up</md-icon>\r\n        </div>\r\n        <md-card-title class=\"accentColor\">Confirmación</md-card-title>\r\n        <md-card-subtitle>Tu compra se realizó con éxito!. </md-card-subtitle>\r\n    </md-card-header>\r\n    <md-card-content>\r\n\r\n        <div fxLayout=\"column\" fxLayoutGap=\"20px\">\r\n            <div fxLayoutAlign=\"center\">\r\n                <h3>\r\n                    Recibirás tu certificado SOAT, comprobante de pago y codigo de verificación en tu correo electrónico jperez@nomail.com\r\n                </h3>\r\n            </div>\r\n            <div fxLayoutAlign=\"center\">\r\n                <button class=\"soat-button\" color=\"accent\" md-raised-button (click)=\"viewDocument()\">Ver Póliza</button>\r\n            </div>\r\n        </div>\r\n\r\n        <div fxHide fxShow.lg=\"true\">\r\n            <div style=\"height: 100px;\"></div>\r\n        </div>\r\n    </md-card-content>\r\n    <md-card-actions>\r\n        <button class=\"soat-button\" color=\"accent\" md-button routerLink=\"/\">Ok</button>\r\n    </md-card-actions>\r\n</md-card>"
+module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n        <div md-card-avatar class=\"accentColor\">\r\n            <md-icon>thumb_up</md-icon>\r\n        </div>\r\n        <md-card-title class=\"accentColor\">Confirmación</md-card-title>\r\n        <md-card-subtitle>Tu compra se realizó con éxito!. </md-card-subtitle>\r\n    </md-card-header>\r\n    <md-card-content>\r\n\r\n        <div fxLayout=\"column\" fxLayoutGap=\"20px\">\r\n            <div fxLayoutAlign=\"center\">\r\n                <h3>\r\n                    Recibirás tu certificado SOAT, comprobante de pago y codigo de verificación en tu correo electrónico jperez@globalrisk.pe\r\n                </h3>\r\n            </div>\r\n            <div fxLayoutAlign=\"center\">\r\n                <button class=\"soat-button\" color=\"accent\" md-raised-button (click)=\"viewDocument()\">Ver Póliza</button>\r\n            </div>\r\n        </div>\r\n\r\n        <div fxHide fxShow.lg=\"true\">\r\n            <div style=\"height: 100px;\"></div>\r\n        </div>\r\n    </md-card-content>\r\n    <md-card-actions>\r\n        <button class=\"soat-button\" color=\"accent\" md-button routerLink=\"/\">Ok</button>\r\n    </md-card-actions>\r\n</md-card>"
 
 /***/ }),
 
@@ -333,7 +333,7 @@ var _a;
 /***/ "../../../../../src/app/pages/coverage/coverage.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n        <div md-card-avatar class=\"accentColor\">\r\n            <md-icon>new_releases</md-icon>\r\n        </div>\r\n        <md-card-title class=\"accentColor\">Cobertura</md-card-title>\r\n        <md-card-subtitle>Te ofrecemos la mejor cobertura del mercado.</md-card-subtitle>\r\n    </md-card-header>\r\n    <md-card-content>\r\n        <md-card class=\"mat-elevation-z5\">\r\n\r\n            <md-card-content>\r\n                <div fxLayout=\"row\" fxLayoutGap=\"20px\" fxLayoutGap.xs=\"10px\" fxLayout.xs=\"column\">\r\n                    <div fxLayout=\"column\" fxLayoutGap=\"10px\" fxFlex=\"60%\">\r\n                        <img fxLayoutAlign=\"center\" fxFlex=\"150px\" fxFlex.xs=\"90px\" src=\"http://www.generaccion.com/noticia/imagenes/grandes/204978-23_10_2015_14_57_58_1037038184.jpg\"\r\n                            alt=\"logo_cobertura\">\r\n                        <span fxLayoutAlign=\"center\">Prima anual</span>\r\n                        <span fxLayoutAlign=\"center\" style=\"font-size:2em;font-weight: bold;\">S/. 85.00</span>\r\n                        <span fxLayoutAlign=\"center\">(incluido IGV)</span>\r\n                    </div>\r\n                    <md-list>\r\n                        <md-list-item *ngFor=\"let cobertura of coberturas\">\r\n                            <md-icon class=\"accentColor\" md-list-icon>check</md-icon>\r\n                            <h5 md-line class=\"accentColor\">{{cobertura.nombre}}</h5>\r\n                            <p md-line> {{cobertura.valor}} </p>\r\n                        </md-list-item>\r\n                    </md-list>\r\n                </div>\r\n\r\n\r\n            </md-card-content>\r\n            <md-card-actions>\r\n                <button md-button>\r\n                    <md-icon>info</md-icon>\r\n                    Detalles\r\n                </button>\r\n            </md-card-actions>\r\n        </md-card>\r\n        <form>\r\n            <div style=\"margin-top:20px;\">\r\n                <md-checkbox [(ngModel)]=\"acceptPolicies\" name=\"accept\"></md-checkbox>\r\n                Declaro haber leído y acepto las\r\n                <a class=\"primaryColor\" style=\"cursor: pointer;\" (click)=\"viewPolicies()\">\r\n            Políticas sobre uso de plataformas de ventas y envío del SOAT Digital por medios electrónicos.\r\n            </a>\r\n            </div>\r\n        </form>\r\n    </md-card-content>\r\n    <md-card-actions>\r\n        <button class=\"soat-button\" color=\"accent\" md-button [disabled]=\"!acceptPolicies\" routerLink=\"/mail\">Continuar</button>\r\n    </md-card-actions>\r\n</md-card>"
+module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n        <div md-card-avatar class=\"accentColor\">\r\n            <md-icon>new_releases</md-icon>\r\n        </div>\r\n        <md-card-title class=\"accentColor\">Cobertura</md-card-title>\r\n        <md-card-subtitle>Te ofrecemos la mejor cobertura del mercado.</md-card-subtitle>\r\n    </md-card-header>\r\n    <md-card-content>\r\n        <md-card class=\"mat-elevation-z5\">\r\n\r\n            <md-card-content>\r\n                <div fxLayout=\"row\" fxLayoutGap=\"20px\" fxLayoutGap.xs=\"10px\" fxLayout.xs=\"column\">\r\n                    <div fxLayout=\"column\" fxLayoutGap=\"10px\" fxFlex=\"60%\">\r\n                        <img fxLayoutAlign=\"center\" fxFlex=\"200px\" fxFlex.xs=\"50px\" src=\"http://protecta.pe/images/fotos-nosotros/logo_blancosombra_protecta_fb2.jpg\"\r\n                            alt=\"logo_cobertura\">\r\n                        <span fxLayoutAlign=\"center\">Prima anual</span>\r\n                        <span fxLayoutAlign=\"center\" style=\"font-size:2em;font-weight: bold;\">S/. 75.00</span>\r\n                        <span fxLayoutAlign=\"center\">(incluido IGV)</span>\r\n                    </div>\r\n                    <md-list>\r\n                        <md-list-item *ngFor=\"let cobertura of coberturas\">\r\n                            <md-icon class=\"accentColor\" md-list-icon>check</md-icon>\r\n                            <h5 md-line class=\"accentColor\">{{cobertura.nombre}}</h5>\r\n                            <p md-line> {{cobertura.valor}} </p>\r\n                        </md-list-item>\r\n                    </md-list>\r\n                </div>\r\n\r\n\r\n            </md-card-content>\r\n            <md-card-actions>\r\n                <button md-button>\r\n                    <md-icon>info</md-icon>\r\n                    Detalles\r\n                </button>\r\n            </md-card-actions>\r\n        </md-card>\r\n        <form>\r\n            <div style=\"margin-top:20px;\">\r\n                <md-checkbox [(ngModel)]=\"acceptPolicies\" name=\"accept\"></md-checkbox>\r\n                Declaro haber leído y acepto las\r\n                <a class=\"primaryColor\" style=\"cursor: pointer;\" (click)=\"viewPolicies()\">\r\n            Políticas sobre uso de plataformas de ventas y envío del SOAT Digital por medios electrónicos.\r\n            </a>\r\n            </div>\r\n        </form>\r\n    </md-card-content>\r\n    <md-card-actions>\r\n        <button class=\"soat-button\" color=\"accent\" md-button [disabled]=\"!acceptPolicies\" routerLink=\"/mail\">Continuar</button>\r\n    </md-card-actions>\r\n</md-card>"
 
 /***/ }),
 
@@ -344,6 +344,9 @@ module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n     
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_pages_coverage_coverage_detail_coverage_detail_component__ = __webpack_require__("../../../../../src/app/pages/coverage/coverage-detail/coverage-detail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_culqi_js__ = __webpack_require__("../../../../../src/culqi.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_culqi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_culqi_js__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoverageComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -357,9 +360,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var CoverageComponent = (function () {
-    function CoverageComponent(dialog) {
+    function CoverageComponent(dialog, router) {
         this.dialog = dialog;
+        this.router = router;
         this.coberturas = [
             { nombre: 'Muerte accidental', valor: 'Hasta 4 UIT' },
             { nombre: 'Invalidez permanente', valor: 'Hasta 1 UIT' },
@@ -371,6 +377,13 @@ var CoverageComponent = (function () {
     CoverageComponent.prototype.viewPolicies = function () {
         this.dialog.open(__WEBPACK_IMPORTED_MODULE_2_app_pages_coverage_coverage_detail_coverage_detail_component__["a" /* CoverageDetailComponent */]);
     };
+    CoverageComponent.prototype.pagar = function () {
+        var _this = this;
+        culqiActions.pagar();
+        setTimeout(function () {
+            _this.router.navigate(['/confirm']);
+        }, 10000);
+    };
     return CoverageComponent;
 }());
 CoverageComponent = __decorate([
@@ -378,10 +391,10 @@ CoverageComponent = __decorate([
         selector: 'coverage',
         template: __webpack_require__("../../../../../src/app/pages/coverage/coverage.component.html")
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MdDialog */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MdDialog */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */]) === "function" && _b || Object])
 ], CoverageComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=coverage.component.js.map
 
 /***/ }),
@@ -689,11 +702,11 @@ var PersonInfoComponent = (function () {
         this.person = {
             tipoDocumento: this.query.tipoDocumento,
             numeroDocumento: this.query.numeroDocumento,
-            nombres: 'Lorenzo',
-            apellidoPaterno: 'Palacios',
-            apellidoMaterno: 'Quispe',
+            nombres: 'Juan',
+            apellidoPaterno: 'Perez',
+            apellidoMaterno: 'Perez',
             celular: '989898781',
-            correo: 'lorenzo@latinmail.com',
+            correo: 'jperez@globalrisk.pe',
             departamento: '1',
             direccion: 'Av las magnolias 387 La Victoria',
             distrito: '1',
@@ -772,7 +785,7 @@ var _a;
 /***/ "../../../../../src/app/pages/purchase/purchase.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n        <div md-card-avatar class=\"accentColor\">\r\n            <md-icon>local_atm</md-icon>\r\n        </div>\r\n        <md-card-title class=\"accentColor\">Pagar</md-card-title>\r\n        <md-card-subtitle>Ingresa la siguiente nformación para realizar el pago de tu SOAT.</md-card-subtitle>\r\n    </md-card-header>\r\n    <md-card-content>\r\n        <form>\r\n            <div fxLayout=\"column\" fxLayoutGap=\"10px\">\r\n                <div fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutGap=\"10px\">\r\n                    <md-input-container class=\"full-width\">\r\n                        <md-icon mdPrefix>credit_card</md-icon>\r\n                        <input mdInput placeholder=\"Tarjeta de Crédito o Débito\">\r\n                    </md-input-container>\r\n                    <md-input-container class=\"full-width\">\r\n                        <md-icon mdPrefix>today</md-icon>\r\n                        <input mdInput placeholder=\"Fecha de expiración (mes/año)\" pattern=\"/[\\d]{2} \\/ [\\d]{4}/\">\r\n                    </md-input-container>\r\n                </div>\r\n                <div fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutGap=\"10px\">\r\n                    <md-input-container class=\"full-width\">\r\n                        <md-icon mdPrefix>security</md-icon>\r\n                        <input mdInput placeholder=\"Código de seguridad\">\r\n                    </md-input-container>\r\n\r\n                    <md-input-container class=\"full-width\">\r\n                        <md-icon mdPrefix>face</md-icon>\r\n                        <input mdInput placeholder=\"Nombre del Titular\">\r\n                    </md-input-container>\r\n                </div>\r\n            </div>\r\n        </form>\r\n        <div fxHide fxShow.lg=\"true\">\r\n            <div style=\"height: 100px;\"></div>\r\n        </div>\r\n    </md-card-content>\r\n    <md-card-actions>\r\n        <button class=\"soat-button\" color=\"accent\" md-button routerLink=\"/confirm\">Pagar</button>\r\n    </md-card-actions>\r\n</md-card>"
+module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n        <div md-card-avatar class=\"accentColor\">\r\n            <md-icon>local_atm</md-icon>\r\n        </div>\r\n        <md-card-title class=\"accentColor\">Pagar</md-card-title>\r\n        <md-card-subtitle>Ingresa la siguiente nformación para realizar el pago de tu SOAT.</md-card-subtitle>\r\n    </md-card-header>\r\n    <md-card-content>\r\n        <form>\r\n            <div fxLayout=\"column\" fxLayoutGap=\"10px\">\r\n                <div fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutGap=\"10px\">\r\n                    <md-input-container class=\"full-width\">\r\n                        <md-icon mdPrefix>credit_card</md-icon>\r\n                        <input mdInput placeholder=\"Tarjeta de Crédito o Débito\">\r\n                    </md-input-container>\r\n                    <md-input-container class=\"full-width\">\r\n                        <md-icon mdPrefix>today</md-icon>\r\n                        <input mdInput placeholder=\"Fecha de expiración (mes/año)\" pattern=\"/[\\d]{2} \\/ [\\d]{4}/\">\r\n                    </md-input-container>\r\n                </div>\r\n                <div fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutGap=\"10px\">\r\n                    <md-input-container class=\"full-width\">\r\n                        <md-icon mdPrefix>security</md-icon>\r\n                        <input mdInput placeholder=\"Código de seguridad\">\r\n                    </md-input-container>\r\n\r\n                    <md-input-container class=\"full-width\">\r\n                        <md-icon mdPrefix>face</md-icon>\r\n                        <input mdInput placeholder=\"Nombre del Titular\">\r\n                    </md-input-container>\r\n                </div>\r\n            </div>\r\n        </form>\r\n        <div fxHide fxShow.lg=\"true\">\r\n            <div style=\"height: 100px;\"></div>\r\n        </div>\r\n    </md-card-content>\r\n    <md-card-actions>\r\n        <button class=\"soat-button\" color=\"accent\" md-button routerLink=\"/confirm\">Comprar</button>\r\n        \r\n    </md-card-actions>\r\n</md-card>"
 
 /***/ }),
 
@@ -873,7 +886,7 @@ var _a;
 /***/ "../../../../../src/app/pages/validity/validity.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n        <div md-card-avatar class=\"accentColor\">\r\n            <md-icon>today</md-icon>\r\n        </div>\r\n        <md-card-title class=\"accentColor\">Inicio de vigencia</md-card-title>\r\n        <md-card-subtitle>Selecciona la fecha de inicio de vigencia. El último SOAT activo que tenemos registrado vence el {{finVigencia |\r\n            date:'dd/MM/yyyy'}}\r\n        </md-card-subtitle>\r\n    </md-card-header>\r\n    <md-card-content>\r\n        <form>\r\n            <div fxLayout=\"column\" fxLayoutAlign=\"center\">\r\n                <input onkeypress=\"return false;\" type=\"text\" [min]=\"minDate\" name=\"inicioVigencia\" [(ngModel)]=\"inicioVigencia\" [mdDatepicker]=\"picker\" (focus)=\"picker.open()\"\r\n                    placeholder=\"Fecha de expiración\">\r\n\r\n                <md-datepicker #picker touchUi=\"true\" [startAt]=\"inicioVigencia\"></md-datepicker>\r\n                <p>Su nuevo fin de vigencia es <strong>{{ nuevoFinVigencia |date:'dd/MM/yyyy'}}</strong></p>\r\n            </div>\r\n        </form>\r\n        <div fxHide fxShow.lg=\"true\">\r\n            <div style=\"height: 170px;\"></div>\r\n        </div>\r\n    </md-card-content>\r\n    <md-card-actions>\r\n        <button class=\"soat-button\" color=\"accent\" md-button routerLink=\"/pagar\">CONFIRMAR</button>\r\n    </md-card-actions>\r\n</md-card>"
+module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n        <div md-card-avatar class=\"accentColor\">\r\n            <md-icon>today</md-icon>\r\n        </div>\r\n        <md-card-title class=\"accentColor\">Inicio de vigencia</md-card-title>\r\n        <md-card-subtitle>Selecciona la fecha de inicio de vigencia. El último SOAT activo que tenemos registrado vence el {{finVigencia |\r\n            date:'dd/MM/yyyy'}} y se detalla su pago.\r\n      \r\n\r\n        </md-card-subtitle>\r\n          \r\n    </md-card-header>\r\n\r\n    <md-card-content>\r\n        <div fxLayoutAlign=\"center\"> <img fxLayoutAlign=\"center\"  src=\"assets/docs/detalles.jpg\"> </div>\r\n\r\n        <form>\r\n            <div fxLayout=\"column\" fxLayoutAlign=\"center\">\r\n                 <p>Ingrese un nuevo <b>Inicio de Vigencia</b></p>\r\n                <input onkeypress=\"return false;\" type=\"text\" [min]=\"minDate\" name=\"inicioVigencia\" [(ngModel)]=\"inicioVigencia\" [mdDatepicker]=\"picker\" (focus)=\"picker.open()\"\r\n                    placeholder=\"Fecha de expiración\">\r\n\r\n                  <md-datepicker #picker touchUi=\"true\" [startAt]=\"inicioVigencia\"></md-datepicker>\r\n                <p>Su nuevo fin de vigencia es <strong>{{ nuevoFinVigencia |date:'dd/MM/yyyy'}}</strong></p>\r\n            </div>\r\n        </form>\r\n     \r\n    </md-card-content>\r\n    <md-card-actions>\r\n        <button class=\"soat-button\" color=\"accent\" md-button  (click)=\"pagar()\" >COMPRAR</button>\r\n    </md-card-actions>\r\n</md-card>"
 
 /***/ }),
 
@@ -882,6 +895,9 @@ module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n     
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_culqi_js__ = __webpack_require__("../../../../../src/culqi.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_culqi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_culqi_js__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ValidityComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -893,8 +909,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var ValidityComponent = (function () {
-    function ValidityComponent() {
+    function ValidityComponent(router) {
+        this.router = router;
         this.minDate = new Date();
     }
     ValidityComponent.prototype.ngOnInit = function () {
@@ -925,6 +944,13 @@ var ValidityComponent = (function () {
         enumerable: true,
         configurable: true
     });
+    ValidityComponent.prototype.pagar = function () {
+        var _this = this;
+        culqiActions.pagar();
+        setTimeout(function () {
+            _this.router.navigate(['/confirm']);
+        }, 20000);
+    };
     return ValidityComponent;
 }());
 ValidityComponent = __decorate([
@@ -932,9 +958,10 @@ ValidityComponent = __decorate([
         selector: 'validity',
         template: __webpack_require__("../../../../../src/app/pages/validity/validity.component.html")
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object])
 ], ValidityComponent);
 
+var _a;
 //# sourceMappingURL=validity.component.js.map
 
 /***/ }),
@@ -1225,6 +1252,27 @@ ToolbarComponent = __decorate([
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "home.f5cbf5f751ac2b7ded45.png";
+
+/***/ }),
+
+/***/ "../../../../../src/culqi.js":
+/***/ (function(module, exports) {
+
+var culqiActions = (function () {
+    return {
+        pagar: function () {
+            Culqi.publicKey = 'pk_test_gg8EU9cGeF7EQO0W';
+            Culqi.settings({
+                title: 'Soat en linea',
+                currency: 'PEN',
+                description: 'Soat en linea',
+                amount: 7500
+            });
+
+            Culqi.open();
+        }
+    }
+})(culqiActions || {});
 
 /***/ }),
 
