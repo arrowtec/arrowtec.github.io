@@ -337,7 +337,7 @@ var _a;
 /***/ "../../../../../src/app/pages/coverage/coverage.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n        <div md-card-avatar class=\"accentColor\">\r\n            <md-icon>new_releases</md-icon>\r\n        </div>\r\n        <md-card-title class=\"accentColor\">Cobertura</md-card-title>\r\n        <md-card-subtitle>Te ofrecemos la mejor cobertura del mercado.</md-card-subtitle>\r\n    </md-card-header>\r\n    <md-card-content>\r\n        <md-card class=\"mat-elevation-z5\">\r\n\r\n            <md-card-content>\r\n                <div fxLayout=\"row\" fxLayoutGap=\"20px\" fxLayoutGap.xs=\"10px\" fxLayout.xs=\"column\">\r\n                    <div fxLayout=\"column\" fxLayoutGap=\"10px\" fxFlex=\"60%\">\r\n                        <img fxLayoutAlign=\"center\" fxFlex=\"200px\" fxFlex.xs=\"50px\" src=\"http://protecta.pe/images/fotos-nosotros/logo_blancosombra_protecta_fb2.jpg\"\r\n                            alt=\"logo_cobertura\">\r\n                        <span fxLayoutAlign=\"center\">Prima anual</span>\r\n                        <span fxLayoutAlign=\"center\" style=\"font-size:2em;font-weight: bold;\">S/. 75.00</span>\r\n                        <span fxLayoutAlign=\"center\">(incluido IGV)</span>\r\n                    </div>\r\n                    <md-list>\r\n                        <md-list-item *ngFor=\"let cobertura of coberturas\">\r\n                            <md-icon class=\"accentColor\" md-list-icon>check</md-icon>\r\n                            <h5 md-line class=\"accentColor\">{{cobertura.nombre}}</h5>\r\n                            <p md-line> {{cobertura.valor}} </p>\r\n                        </md-list-item>\r\n                    </md-list>\r\n                </div>\r\n\r\n\r\n            </md-card-content>\r\n            <md-card-actions>\r\n                <button md-button>\r\n                    <md-icon>info</md-icon>\r\n                    Detalles\r\n                </button>\r\n            </md-card-actions>\r\n        </md-card>\r\n        <form>\r\n            <div style=\"margin-top:20px;\">\r\n                <md-checkbox [(ngModel)]=\"acceptPolicies\" name=\"accept\"></md-checkbox>\r\n                Declaro haber leído y acepto las\r\n                <a class=\"primaryColor\" style=\"cursor: pointer;\" (click)=\"viewPolicies()\">\r\n            Políticas sobre uso de plataformas de ventas y envío del SOAT Digital por medios electrónicos.\r\n            </a>\r\n            </div>\r\n        </form>\r\n    </md-card-content>\r\n    <md-card-actions>\r\n        <button class=\"soat-button\" color=\"accent\" md-raised-button [disabled]=\"!acceptPolicies\" routerLink=\"/mail\">Continuar</button>\r\n    </md-card-actions>\r\n</md-card>"
+module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n        <div md-card-avatar class=\"accentColor\">\r\n            <md-icon>new_releases</md-icon>\r\n        </div>\r\n        <md-card-title class=\"accentColor\">Cobertura</md-card-title>\r\n        <md-card-subtitle>Te ofrecemos la mejor cobertura del mercado.</md-card-subtitle>\r\n    </md-card-header>\r\n    <md-card-content>\r\n        <md-card class=\"mat-elevation-z5\">\r\n\r\n            <md-card-content>\r\n                <div fxLayout=\"row\" fxLayoutGap=\"20px\" fxLayoutGap.xs=\"10px\" fxLayout.xs=\"column\">\r\n                    <div fxLayout=\"column\" fxLayoutAlign=\"center\" fxLayoutGap=\"10px\" fxFlex=\"60%\">\r\n                        <div fxLayoutAlign=\"center\">\r\n                            <img width=\"200px\" src=\"http://protecta.pe/images/fotos-nosotros/logo_blancosombra_protecta_fb2.jpg\" alt=\"logo_cobertura\">\r\n                        </div>\r\n                        <span fxLayoutAlign=\"center\">Prima anual</span>\r\n                        <span fxLayoutAlign=\"center\" style=\"font-size:2em;font-weight: bold;\">S/. 75.00</span>\r\n                        <span fxLayoutAlign=\"center\">(incluido IGV)</span>\r\n                    </div>\r\n                    <md-list>\r\n                        <md-list-item *ngFor=\"let cobertura of coberturas\">\r\n                            <md-icon class=\"accentColor\" md-list-icon>check</md-icon>\r\n                            <h5 md-line class=\"accentColor\">{{cobertura.nombre}}</h5>\r\n                            <p md-line> {{cobertura.valor}} </p>\r\n                        </md-list-item>\r\n                    </md-list>\r\n                </div>\r\n\r\n\r\n            </md-card-content>\r\n            <md-card-actions>\r\n                <button md-button>\r\n                    <md-icon>info</md-icon>\r\n                    Detalles\r\n                </button>\r\n            </md-card-actions>\r\n        </md-card>\r\n        <form>\r\n            <div style=\"margin-top:20px;\">\r\n                <md-checkbox [(ngModel)]=\"acceptPolicies\" name=\"accept\"></md-checkbox>\r\n                Declaro haber leído y acepto las\r\n                <a class=\"primaryColor\" style=\"cursor: pointer;\" (click)=\"viewPolicies()\">\r\n            Políticas sobre uso de plataformas de ventas y envío del SOAT Digital por medios electrónicos.\r\n            </a>\r\n            </div>\r\n        </form>\r\n    </md-card-content>\r\n    <md-card-actions>\r\n        <button class=\"soat-button\" color=\"accent\" md-raised-button [disabled]=\"!acceptPolicies\" routerLink=\"/mail\">Continuar</button>\r\n    </md-card-actions>\r\n</md-card>"
 
 /***/ }),
 
@@ -348,9 +348,6 @@ module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n     
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_pages_coverage_coverage_detail_coverage_detail_component__ = __webpack_require__("../../../../../src/app/pages/coverage/coverage-detail/coverage-detail.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_culqi_js__ = __webpack_require__("../../../../../src/culqi.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_culqi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_culqi_js__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoverageComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -364,29 +361,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
 var CoverageComponent = (function () {
-    function CoverageComponent(dialog, router) {
+    function CoverageComponent(dialog) {
         this.dialog = dialog;
-        this.router = router;
         this.coberturas = [
             { nombre: 'Muerte accidental', valor: 'Hasta 4 UIT' },
             { nombre: 'Invalidez permanente', valor: 'Hasta 1 UIT' },
             { nombre: 'Incapacidad temporal', valor: 'Hasta 5 UIT' }
         ];
     }
-    CoverageComponent.prototype.ngOnInit = function () {
-    };
+    CoverageComponent.prototype.ngOnInit = function () { };
     CoverageComponent.prototype.viewPolicies = function () {
         this.dialog.open(__WEBPACK_IMPORTED_MODULE_2_app_pages_coverage_coverage_detail_coverage_detail_component__["a" /* CoverageDetailComponent */]);
-    };
-    CoverageComponent.prototype.pagar = function () {
-        var _this = this;
-        culqiActions.pagar();
-        setTimeout(function () {
-            _this.router.navigate(['/confirm']);
-        }, 10000);
     };
     return CoverageComponent;
 }());
@@ -395,10 +381,10 @@ CoverageComponent = __decorate([
         selector: 'coverage',
         template: __webpack_require__("../../../../../src/app/pages/coverage/coverage.component.html")
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MdDialog */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MdDialog */]) === "function" && _a || Object])
 ], CoverageComponent);
 
-var _a, _b;
+var _a;
 //# sourceMappingURL=coverage.component.js.map
 
 /***/ }),
@@ -922,6 +908,8 @@ module.exports = "<md-card class=\"soat-card\">\r\n    <md-card-header>\r\n     
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_culqi_js__ = __webpack_require__("../../../../../src/culqi.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_culqi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_culqi_js__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SummaryComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -932,6 +920,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 var SummaryComponent = (function () {
@@ -946,6 +935,13 @@ var SummaryComponent = (function () {
         }, false);
     }
     SummaryComponent.prototype.ngOnInit = function () {
+        Culqi.publicKey = 'pk_test_gg8EU9cGeF7EQO0W';
+        Culqi.settings({
+            title: 'Soat en linea',
+            currency: 'PEN',
+            description: 'Soat en linea',
+            amount: 7500
+        });
         var data = JSON.parse(sessionStorage.getItem('dt'));
         if (data && data.vh) {
             this.placa = data.vh.placa;
@@ -1344,18 +1340,8 @@ module.exports = __webpack_require__.p + "home.f5cbf5f751ac2b7ded45.png";
 /***/ "../../../../../src/culqi.js":
 /***/ (function(module, exports) {
 
-
-Culqi.publicKey = 'pk_test_gg8EU9cGeF7EQO0W';
-Culqi.settings({
-    title: 'Soat en linea',
-    currency: 'PEN',
-    description: 'Soat en linea',
-    amount: 7500
-});
-
 function culqi() {
     if (Culqi && window.CustomEvent) {
-
         var event = new CustomEvent("culqiResponse", {
             detail: {
                 token: Culqi.token,
